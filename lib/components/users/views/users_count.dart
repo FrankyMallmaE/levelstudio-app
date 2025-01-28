@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:levelstudio_app/schemas/get_users.dart';
 
 class UsersCount extends StatefulWidget {
   const UsersCount({super.key});
@@ -9,20 +10,11 @@ class UsersCount extends StatefulWidget {
 }
 
 class _UsersCountState extends State<UsersCount> {
-  final String query = """
-       query {
-       users{
-       id
-       }
-       }
-
-""";
-
   @override
   Widget build(BuildContext context) {
     return Query(
       options: QueryOptions(
-        document: gql(query),
+        document: gql(GET_USERS),
       ),
       builder: (QueryResult result,
           {VoidCallback? refetch, FetchMore? fetchMore}) {
