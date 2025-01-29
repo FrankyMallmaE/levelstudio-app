@@ -3,8 +3,8 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:levelstudio_app/components/users/views/users.dart';
 
 void main() async {
-  // Inicializamos GraphQL
-  await initHiveForFlutter(); // Requerido para GraphQL cache
+  
+  await initHiveForFlutter(); 
   runApp(const MyApp());
 }
 
@@ -13,18 +13,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Configuración del HttpLink con tu URL de ngrok
+    // Configuración del HttpLink con  URL de ngrok
     final HttpLink httpLink = HttpLink(
-      'https://cb02-45-190-170-23.ngrok-free.app/query',
+      'https://9c84-45-190-170-23.ngrok-free.app/query',
     );
 
-    // Configuración del cliente GraphQL
+   
     final GraphQLClient client = GraphQLClient(
       link: httpLink,
-      cache: GraphQLCache(store: HiveStore()), // Cache basada en Hive
+      cache: GraphQLCache(store: HiveStore()), 
     );
 
-    // Provisión del cliente GraphQL
+    
     return GraphQLProvider(
       client: ValueNotifier(client),
       child: const MaterialApp(

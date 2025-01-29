@@ -57,13 +57,26 @@ class _ColumnsUserState extends State<ColumnsUser> {
                 elevation: 0,
                 color: const Color(0xFFE2E0DE),
                 child: ListTile(
-                  title: Text(user.name),
+                  title: Text(
+                    user.name,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                   subtitle: Text(
                     user.lastname,
+                    style: const TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                   trailing: Text(
                     '${user.age} años',
-                    style: const TextStyle(fontSize: 12),
+                    style: const TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                 ),
               );

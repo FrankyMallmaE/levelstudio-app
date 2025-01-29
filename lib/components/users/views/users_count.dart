@@ -33,7 +33,7 @@ class _UsersCountState extends State<UsersCount> {
           style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
-            color: Color(0xFFC5CBD1),
+            color: Color(0xFFa5a5a5),
           ),
         );
       },

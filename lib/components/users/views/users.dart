@@ -26,6 +26,9 @@ class _UsersState extends State<Users> {
             Container(
                 padding: const EdgeInsets.only(left: 10),
                 child: const UsersCount()),
+            const SizedBox(
+              height: 10,
+            ),
             const ColumnsUser(),
           ],
         ),
